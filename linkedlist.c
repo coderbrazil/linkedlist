@@ -97,3 +97,9 @@ Linkedlist* removeCellbyIndex(Linkedlist* l,int i)
 	return previous;
 }
 //*/
+
+
+Linkedlist* removeCellbyValue(Linkedlist* l,int i)
+{
+    return l;
+}
