@@ -27,9 +27,10 @@ Linkedlist* insert(Linkedlist* l, int i)
 void print(Linkedlist* l)
 {
 	Linkedlist* i;
-		for(i=l;i!= NULL;i = i->next){
+		for(i=l;i!= NULL;i = i->next)
+        {
 			printf(" value = %i \n",i->value);
-	}
+	    }
 }
 
 
@@ -37,9 +38,12 @@ int count(Linkedlist* l)
 {
 	Linkedlist* i;
 	int NumberCells=0;
-        if(l==NULL){
+        if(l==NULL)
+        {
             return NumberCells;
-        }else{
+        }
+        else
+        {
             for(i=l;i!= NULL;i = i->next){
                 NumberCells++;
         }
@@ -72,18 +76,22 @@ Linkedlist* removeCellbyIndex(Linkedlist* l,int i)
 	Linkedlist* aux = l;
     int v = 0;
 
-	if(l==NULL){
+	if(l==NULL)
+    {
         return l;
 		exit(0);
     }
 
-	else if(i==0){
+	else if(i==0)
+    {
         previous = l->next;
             free(l);
     }
-	else if(i != 0){
+	else if(i != 0)
+    {
 
-		while(v < i){
+		while(v < i)
+        {
         	previous = l;
         	l = l->next;
         	v++;
@@ -99,7 +107,36 @@ Linkedlist* removeCellbyIndex(Linkedlist* l,int i)
 //*/
 
 
-Linkedlist* removeCellbyValue(Linkedlist* l,int i)
+Linkedlist* removeCellbyValue(Linkedlist* l,int value)
 {
-    return l;
+    Linkedlist* previous = NULL;
+	Linkedlist* aux = l;
+    int v = l->value;
+
+	if(l==NULL)
+    {
+        return l;
+		exit(0);
+    }
+
+	else if(value == l->value)
+    {
+        previous = l->next;
+        free(l);
+    }
+    else
+    {
+        while(v != value)
+        {
+        	previous = l;
+        	l = l->next;
+        	v = l->value;
+		}	
+
+		previous->next = l->next;
+		free(l);
+		previous = aux;
+	}    
+	
+	return previous;
 }

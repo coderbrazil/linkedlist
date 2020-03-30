@@ -15,6 +15,6 @@ int minValue(Linkedlist* l);
 
 Linkedlist* removeCellbyIndex(Linkedlist* l,int i);
 
-Linkedlist* removeCellbyValue(Linkedlist* l,int i);
+Linkedlist* removeCellbyValue(Linkedlist* l,int value);
 
 

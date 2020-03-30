@@ -9,13 +9,13 @@ int main(){
     int p;
     int k;
     l = create();
-	l = insert(l,100);
+	l = insert(l,99);
 	l = insert(l,101);
 	l = insert(l,102);
     l = insert(l,100);
 	l = insert(l,101);
 	l = insert(l,102);
-    l = insert(l,100);
+    l = insert(l,104);
 	l = insert(l,101);
 	l = insert(l,102);
     l = insert(l,100);
@@ -24,21 +24,9 @@ int main(){
     l = insert(l,102);
     l = insert(l,102);
     print(l);
-    p = count(l);
-
-    printf("Number of cells %i \n",p);
-
-    l = removeCellbyIndex(l,5);
-    
+    printf("\n\n\n");
+    removeCellbyIndex(l,6);
     print(l);
-
-    p = count(l);
-
-    printf("number of cells %i \n",p);
-    
-    k = minValue(l);
-
-    printf("min value %i \n",k);
 
     return 0;
 
