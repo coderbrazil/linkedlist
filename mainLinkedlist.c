@@ -40,8 +40,6 @@ int main(){
 
     printf("min value %i \n",k);
 
-   // 
-
     return 0;
 
 }
