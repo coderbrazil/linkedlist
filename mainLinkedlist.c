@@ -21,6 +21,8 @@ int main(){
     l = insert(l,100);
 	l = insert(l,101);
 	l = insert(l,102);
+    l = insert(l,102);
+    l = insert(l,102);
     print(l);
     p = count(l);
 
